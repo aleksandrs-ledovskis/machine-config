@@ -1,0 +1,4 @@
+StringLiterals:
+  EnforcedStyle: double_quotes
+TrailingComma:
+  EnforcedStyleForMultiline: comma

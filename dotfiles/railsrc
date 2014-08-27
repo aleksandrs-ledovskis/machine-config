@@ -1,0 +1,6 @@
+def ucu(login = nil)
+  login ||= ENV["USER"]
+  raise "Can't login with empty user" unless login
+  User.current_user = User.where(login: login).first!
+  puts "Logged in as #{login}"
+end

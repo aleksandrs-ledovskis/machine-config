@@ -1,0 +1,40 @@
+# chgems/gem_home
+.gem/
+
+# https://github.com/github/gitignore/blob/master/Global/vim.gitignore
+[._]*.s[a-w][a-z]
+[._]s[a-w][a-z]
+*.un~
+Session.vim
+.netrwhist
+*~
+
+# https://github.com/github/gitignore/blob/master/Global/Tags.gitignore
+TAGS
+!TAGS/
+tags
+!tags/
+gtags.files
+GTAGS
+GRTAGS
+GPATH
+cscope.files
+cscope.out
+cscope.in.out
+cscope.po.out
+
+# https://github.com/github/gitignore/blob/master/Global/Vagrant.gitignore
+.vagrant/
+
+# https://github.com/github/gitignore/blob/master/Global/OSX.gitignore
+_Store
+.AppleDouble
+.LSOverride
+._*
+.Spotlight-V100
+.Trashes
+.AppleDB
+.AppleDesktop
+Network Trash Folder
+Temporary Items
+.apdisk

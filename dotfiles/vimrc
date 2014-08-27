@@ -1,0 +1,170 @@
+set nocompatible              " be iMproved, required
+filetype off                  " required
+
+" set the runtime path to include Vundle and initialize
+set rtp+=~/.vim/bundle/Vundle.vim
+call vundle#begin()
+
+"
+" BEGIN VUNDLE MAGIC
+"
+
+" let Vundle manage Vundle, required
+Plugin 'gmarik/Vundle.vim'
+
+Plugin 'tpope/vim-fugitive' " Git stuff
+Plugin 'wincent/Command-T' " Fuzzy file finder
+Plugin 'sjl/gundo.vim' " Treeview of file changes
+Plugin 'mileszs/ack.vim' " Grep-like searcher, using Ack/Ag
+Plugin 'scrooloose/nerdcommenter' " Comment'o'matic
+Plugin 'scrooloose/nerdtree' " File treeview browser
+Plugin 'scrooloose/syntastic' " Linter
+Plugin 'drn/zoomwin-vim' " Zoom splits on <C-o>
+Plugin 'tpope/vim-rails' " Rails syntax support & spec generators
+Plugin 'vim-ruby/vim-ruby' " Edge version of Vim's Ruby syntax support
+Plugin 'tpope/vim-endwise' " Somewhat better block construct/delimeter auto-placement
+Plugin 'matchit.zip' " Extended <%> matching
+Plugin 'Colorizer--Brabandt' " Display colors, as for example is CSS #F00B44 declarations
+Plugin 'ervandew/supertab' " Better <TAB> completion/IntelliSense
+Plugin 'tpope/vim-unimpaired' " Useful bracket maps
+Plugin 'majutsushi/tagbar' " Source code tag browser
+
+" All of your Plugins must be added before the following line
+call vundle#end()            " required
+filetype plugin indent on    " required
+
+"
+" END VUNDLE MAGIC
+"
+
+" Include toolkit/helper functions
+source ~/.vim/functions.vim
+
+" No EOL
+set binary
+au BufNewFile * set noeol
+
+" Basic
+set number " Show line numbers
+set ruler " Show line and column number
+syntax enable " Turn on syntax highlighting allowing local overrides
+set encoding=utf-8 " Set default encoding to UTF-8
+
+" Whitespace
+set nowrap " don't wrap lines
+set tabstop=2 " a tab is two spaces
+set shiftwidth=2 " an autoindent (with <<) is two spaces
+set expandtab " use spaces, not tabs
+set list " Show invisible characters
+set backspace=indent,eol,start " backspace through everything in insert mode
+
+" List chars
+set listchars="" " Reset the listchars
+set listchars=tab:\ \ " a tab should display as " ", trailing whitespace as "."
+set listchars+=trail:. " show trailing spaces as dots
+set listchars+=extends:> " The character to show in the last column when wrap is off and the line continues beyond the right of the screen
+set listchars+=precedes:< " The character to show in the last column when wrap is off and the line continues beyond the left of the screen
+
+" Searching
+set hlsearch " highlight matches
+set incsearch " incremental searching
+set ignorecase " searches are case insensitive...
+set smartcase " ... unless they contain at least one capital letter
+
+" Backups
+set backupdir^=~/.vim/_backup// " where to put backup files.
+set directory^=~/.vim/_temp// " where to put swap files.
+
+" Misc
+set timeoutlen=250 " Time to wait after ESC (default causes an annoying delay)
+set showmatch " Show matching brackets.
+set matchtime=5 " Bracket blinking.
+set novisualbell " No blinking
+set noerrorbells " No noise.
+set vb t_vb= " disable any beeps or flashes on error
+set mouse-=a " Disable mouse
+set mousehide " Hide mouse after chars typed
+set splitbelow
+set splitright
+
+" Last file position jump, except Git commit files
+au BufReadPost * if &filetype !~ '^git\c' && line("'\"") > 0 && line("'\"") <= line("$") | exe "normal! g`\"" | endif
+au BufRead,BufNewFile {COMMIT_EDITMSG} set ft=gitcommit
+
+" PL/SQL file syntax highlights
+au BufRead,BufNewFile *.plb setfiletype plsql
+
+" Toggle paste mode
+nmap <silent> <F4> :set invpaste<CR>:set paste?<CR>
+imap <silent> <F4> <ESC>:set invpaste<CR>:set paste?<CR>
+
+" Tabs
+nnoremap <silent> <LocalLeader>[ :tabprev<CR>
+nnoremap <silent> <LocalLeader>] :tabnext<CR>
+
+" Gundo
+nnoremap <F5> :GundoToggle<CR>
+
+" Ack.vim
+let g:ackprg = 'ag --nogroup --nocolor --column' " Use Ag with Ack.vim
+call Toolkit__add_mapping('map', '<leader>f', ':Ack<space>')
+call Toolkit__add_mapping('vnoremap', '<leader>as', ':<C-u>exec Toolkit__VAckSearch()<CR>')
+
+" Command-T
+let g:CommandTFileScanner = 'watchman' " Use uber-speedy Watchman, with fallback to find(1)
+
+" Syntastic
+let g:syntastic_ruby_checkers = ['mri', 'rubocop']
+let g:syntastic_aggregate_errors = 1 " Run all checkers and combine output
+let g:syntastic_always_populate_loc_list = 1 " Auto location list population with errors
+let g:syntastic_error_symbol = "✗"
+let g:syntastic_style_error_symbol = "✗"
+let g:syntastic_warning_symbol = "⚠"
+let g:syntastic_style_warning_symbol = "⚠"
+" Syntastic speedup, to not to choke on > 1000 warnings per single file. Use :Errors
+let g:syntastic_enable_highlighting = 0
+let g:syntastic_echo_current_error = 0
+
+" NERDTree
+call Toolkit__add_mapping('map', '<F2>', ':NERDTreeToggle<CR>')
+
+" Colorizer
+let g:colorizer_auto_filetype='css,html,erb'
+
+" Tagbar
+call Toolkit__add_mapping('map', '<leader>rt', ':TagbarToggle<CR>')
+let g:tagbar_type_plsql = {
+    \ 'ctagstype' : 'sql',
+    \ 'kinds'     : [
+        \ 'P:packages',
+        \ 'd:prototypes',
+        \ 'c:cursors',
+        \ 'f:functions',
+        \ 'F:record fields',
+        \ 'L:block label',
+        \ 'p:procedures',
+        \ 's:subtypes',
+        \ 't:tables',
+        \ 'v:variables',
+        \ 'i:indexes',
+        \ 'V:views',
+        \ 'n:synonyms',
+    \ ]
+\ } " plsql filetype (.pls/.plb) support
+
+" Remove search highlight keymap
+call Toolkit__add_mapping('map', '<Space>', ':noh<CR>')
+
+" Powerline
+source $BREW_HOME/lib/python2.7/site-packages/powerline/bindings/vim/plugin/powerline.vim
+python from powerline.vim import setup as powerline_setup
+python powerline_setup()
+python del powerline_setup
+set laststatus=2 " Always display the statusline in all windows
+set noshowmode " Hide the default mode text (e.g. -- INSERT -- below the statusline)
+
+" Tarpit - useful, but slow features. Left for testing in future Vim versions
+"set cursorline
+"set cursorcolumn
+"let g:syntastic_enable_highlighting = 1
+"let g:syntastic_echo_current_error = 1

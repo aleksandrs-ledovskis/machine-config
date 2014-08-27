@@ -1,0 +1,7 @@
+# Homebrew path + smoketest
+export PATH=/usr/local/bin:$PATH
+export BREW_HOME=$(brew --prefix)
+
+# Oracle Instant Client reqs
+export ORACLE_IC_HOME="$HOME/.oracle/instantclient_11_2"
+export DYLD_LIBRARY_PATH=$ORACLE_IC_HOME:$DYLD_LIBRARY_PATH
