@@ -84,8 +84,9 @@ set noerrorbells " No noise.
 set vb t_vb= " disable any beeps or flashes on error
 set mouse-=a " Disable mouse
 set mousehide " Hide mouse after chars typed
-set splitbelow
-set splitright
+set splitbelow " Horizontal split - current pane stays on top
+set splitright " Vertical split - current pane is on left side
+set background=dark " Make vim dark-terminal friendlier
 
 " Last file position jump, except Git commit files
 au BufReadPost * if &filetype !~ '^git\c' && line("'\"") > 0 && line("'\"") <= line("$") | exe "normal! g`\"" | endif

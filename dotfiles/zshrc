@@ -69,3 +69,7 @@ source $BREW_HOME/share/gem_home/gem_home.sh
 # Make <C-s> work in CommandT
 # https://github.com/wincent/Command-T/blob/master/doc/command-t.txt
 stty -ixon
+
+# Fixes issue with gem_home (https://github.com/postmodern/gem_home/issues/7)
+unsetopt auto_pushd
+unsetopt pushd_ignore_dups
