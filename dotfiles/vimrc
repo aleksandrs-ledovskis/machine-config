@@ -28,6 +28,7 @@ Plugin 'Colorizer--Brabandt' " Display colors, as for example is CSS #F00B44 dec
 Plugin 'ervandew/supertab' " Better <TAB> completion/IntelliSense
 Plugin 'tpope/vim-unimpaired' " Useful bracket maps
 Plugin 'majutsushi/tagbar' " Source code tag browser
+Plugin 'mattn/emmet-vim' " HTML & CSS zen coding (ultra-fast expansion)
 
 " All of your Plugins must be added before the following line
 call vundle#end()            " required
