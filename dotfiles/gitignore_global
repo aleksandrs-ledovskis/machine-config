@@ -1,6 +1,9 @@
 # chgems/gem_home
 .gem/
 
+# Ack/Ag/Pt config
+.ackrc
+
 # https://github.com/github/gitignore/blob/master/Global/vim.gitignore
 [._]*.s[a-w][a-z]
 [._]s[a-w][a-z]
@@ -27,7 +30,7 @@ cscope.po.out
 .vagrant/
 
 # https://github.com/github/gitignore/blob/master/Global/OSX.gitignore
-_Store
+.DS_Store
 .AppleDouble
 .LSOverride
 ._*

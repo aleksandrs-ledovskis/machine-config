@@ -1,13 +1,15 @@
-set nocompatible              " be iMproved, required
-filetype off                  " required
+scriptencoding utf-8 " Use Unicode characters in .vimrc
 
-" set the runtime path to include Vundle and initialize
-set rtp+=~/.vim/bundle/Vundle.vim
-call vundle#begin()
+set nocompatible " turn off vi mode
 
 "
 " BEGIN VUNDLE MAGIC
 "
+filetype off " Disable filetype detection for duration of Vundle loading
+
+" set the runtime path to include Vundle and initialize
+set rtp+=~/.vim/bundle/Vundle.vim
+call vundle#begin()
 
 " let Vundle manage Vundle, required
 Plugin 'gmarik/Vundle.vim'
@@ -61,7 +63,7 @@ set backspace=indent,eol,start " backspace through everything in insert mode
 
 " List chars
 set listchars="" " Reset the listchars
-set listchars=tab:▷⋅ " a tab should display as "▷⋅"
+set listchars=tab:∘⋅ " a tab should display as "∘⋅"
 set listchars+=trail:⋅ " show trailing spaces as "⋅"
 set listchars+=extends:→ "The character to show in the last column when wrap is off and the line continues beyond the right of the screen
 set listchars+=precedes:← " The character to show in the first column when wrap is off and the line continues beyond the left of the screen
@@ -108,7 +110,7 @@ nnoremap <silent> <LocalLeader>] :tabnext<CR>
 nnoremap <F5> :GundoToggle<CR>
 
 " Ack.vim
-let g:ackprg = 'ag --nogroup --nocolor --column' " Use Ag with Ack.vim
+let g:ackprg = 'pt --nogroup --nocolor' " Use Pt (the_platinum_searcher) with Ack.vim
 call Toolkit__add_mapping('map', '<leader>f', ':Ack<space>')
 call Toolkit__add_mapping('vnoremap', '<leader>as', ':<C-u>exec Toolkit__VAckSearch()<CR>')
 
