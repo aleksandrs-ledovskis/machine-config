@@ -1,0 +1,140 @@
+#!/usr/bin/env zsh
+
+#########
+# BREWS #
+#########
+
+brews=(
+  # Ruby
+  ## Tool for ing Ruby from source
+  ruby-build
+  ## Ruby version manager
+  chruby
+  ## Featherweight gemset-like provider
+  gem_home
+
+  # Cache
+  ## Memory-based object store
+  memcached
+
+  # DB
+  ## Small, embedded database
+  sqlite
+  ## General purpose RDBMS
+  mysql
+
+  # Dev stuff
+  ## Editor
+  vim
+  ## The DVCS
+  git
+  ## Terminal multiplexer. Split console windows and stuff
+  tmux
+  ## OS X specific trick to allow copy/pastes work from CLI
+  reattach-to-user-namespace
+  ## Fuzzy file content searcher, like grep only 1000x faster
+  the_silver_searcher
+  ## Tiny bit faster `the_silver_searcher`
+  the_platinum_searcher
+  ## Fuzzy file name searcher
+  watchman
+  ## Tag creator. Keeps index of definitions
+  ctags
+
+  # JS
+  ## Compressor and linter
+  closure-compiler
+  ## Node version manager
+  nvm
+
+  # Misc
+  ## .rpm extraction
+  rpm2cpio
+  ## CLI IRC client
+  weechat
+  ## Password generator
+  pwgen
+  ## Assorted pack of various small Unix utilities
+  moreutils
+  ## top(1) on steroids
+  htop-osx
+  ## Random git utilities
+  git-extras
+  ## Speed up directory traversal
+  z
+  ## Retrieval of files across various protocols
+  wget
+  ## CLI hex viewer
+  dhex
+  ## Cleanup filenames with weird characters
+  detox
+  ## Collection of usefull non-standard tools
+  moreutils
+)
+
+#########
+# CASKS #
+#########
+
+casks=(
+  # Dev stuff
+  ## LDAP workhorse
+  apache-directory-studio
+  ## Git GUI for visualizing those tens of parallel flows
+  sourcetree
+  ## Virtual development environment management
+  vagrant
+  ## Packet analyzer
+  wireshark
+
+  # OS X
+  ## Multi-button mouse savior
+  bettertouchtool
+  ## Disk space analyzer/treemap viewer
+  disk-inventory-x
+  ## File archiver. Happily munges through all popular and obscure formats (e.g. RAR)
+  keka
+  ## Menubar status insights
+  menumeters
+  ## X11 for Mac
+  xquartz
+
+  # Misc
+  ## 3D graphics workbench [3ds Max]
+  blender
+  ## Free diagram builder [Visio]
+  dia
+  ## Free 2D raster graphics editor [Photoshop]
+  gimp
+  ## Free vector graphics editor [Illustrator]
+  inkscape
+  ## Free office suite [Office]
+  libreoffice
+  ## Desktop sharing/remote control
+  teamviewer
+  ## BitTorrent client
+  transmission
+  ## Install disk images of flash drives
+  unetbootin
+  ## Media player, hadling anything thrown at it
+  vlc
+)
+
+###########
+###########
+###########
+
+brew update
+
+for package in $brews
+do
+  brew install $package
+done
+
+brew tap caskroom/cask
+for package in $casks
+do
+  brew cask install $package
+done
+
+brew cleanup
