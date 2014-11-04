@@ -70,6 +70,8 @@ brews=(
   detox
   ## Collection of usefull non-standard tools
   moreutils
+  ## CLI disk usage viewer
+  ncdu
 )
 
 #########
@@ -104,8 +106,12 @@ casks=(
   blender
   ## Free diagram builder [Visio]
   dia
+  ## Automatic display color management
+  flux
   ## Free 2D raster graphics editor [Photoshop]
   gimp
+  ## Google Hangouts Screenshare enablement browser extensions
+  google-hangouts
   ## Free vector graphics editor [Illustrator]
   inkscape
   ## Free office suite [Office]
