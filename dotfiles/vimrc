@@ -31,6 +31,8 @@ Plugin 'ervandew/supertab' " Better <TAB> completion/IntelliSense
 Plugin 'tpope/vim-unimpaired' " Useful bracket maps
 Plugin 'majutsushi/tagbar' " Source code tag browser
 Plugin 'mattn/emmet-vim' " HTML & CSS zen coding (ultra-fast expansion)
+Plugin 'embear/vim-localvimrc' " Local custom/per-project .lvimrc files
+Plugin 'editorconfig/editorconfig-vim' " EditorConfig support (editor agnostic format configs)
 
 " All of your Plugins must be added before the following line
 call vundle#end()            " required
