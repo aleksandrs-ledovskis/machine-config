@@ -131,6 +131,7 @@ casks=(
 ###########
 
 brew update
+brew upgrade
 
 for package in $brews
 do
