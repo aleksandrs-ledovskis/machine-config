@@ -34,6 +34,7 @@ Plugin 'mattn/emmet-vim' " HTML & CSS zen coding (ultra-fast expansion)
 Plugin 'embear/vim-localvimrc' " Local custom/per-project .lvimrc files
 Plugin 'editorconfig/editorconfig-vim' " EditorConfig support (editor agnostic format configs)
 Plugin 'chriskempson/base16-vim' " Base16 color scheme support
+Plugin 'Yggdroot/indentLine' " Highlight indentation lines
 
 " All of your Plugins must be added before the following line
 call vundle#end()            " required
@@ -96,7 +97,7 @@ set splitright " Vertical split - current pane is on left side
 " Colors
 let base16colorspace=256  " Access colors present in 256 colorspace
 set background=dark " Make vim dark-terminal friendlier
-colorscheme base16-twilight
+colorscheme base16-twilight " Specific color scheme from Base16 collection
 
 " Last file position jump, except Git commit files
 au BufReadPost * if &filetype !~ '^git\c' && line("'\"") > 0 && line("'\"") <= line("$") | exe "normal! g`\"" | endif
@@ -173,6 +174,10 @@ python powerline_setup()
 python del powerline_setup
 set laststatus=2 " Always display the statusline in all windows
 set noshowmode " Hide the default mode text (e.g. -- INSERT -- below the statusline)
+
+" indentLine
+let g:indentLine_color_term = 236
+let g:indentLine_char= ""
 
 " Tarpit - useful, but slow features. Left for testing in future Vim versions
 "set cursorline

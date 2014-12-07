@@ -72,8 +72,6 @@ brews=(
   moreutils
   ## CLI disk usage viewer
   ncdu
-  ## Font editor. Using git build as Bottle is not runnable due to bug
-  fontforge --HEAD
 )
 
 #########
