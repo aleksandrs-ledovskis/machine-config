@@ -72,6 +72,8 @@ brews=(
   moreutils
   ## CLI disk usage viewer
   ncdu
+  ## Font editor. Using git build as Bottle is not runnable due to bug
+  fontforge --HEAD
 )
 
 #########
@@ -116,6 +118,8 @@ casks=(
   inkscape
   ## Free office suite [Office]
   libreoffice
+  ## IM client
+  skype
   ## Desktop sharing/remote control
   teamviewer
   ## BitTorrent client
