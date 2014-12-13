@@ -35,6 +35,7 @@ Plugin 'embear/vim-localvimrc' " Local custom/per-project .lvimrc files
 Plugin 'editorconfig/editorconfig-vim' " EditorConfig support (editor agnostic format configs)
 Plugin 'chriskempson/base16-vim' " Base16 color scheme support
 Plugin 'Yggdroot/indentLine' " Highlight indentation lines
+Plugin 'aledovsky/gitv' " Extra insight power in Git related tasks. Uses fugitive. Forked version with bug fix
 
 " All of your Plugins must be added before the following line
 call vundle#end()            " required
