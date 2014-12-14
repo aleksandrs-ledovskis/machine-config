@@ -36,6 +36,10 @@ Plugin 'editorconfig/editorconfig-vim' " EditorConfig support (editor agnostic f
 Plugin 'chriskempson/base16-vim' " Base16 color scheme support
 Plugin 'Yggdroot/indentLine' " Highlight indentation lines
 Plugin 'aledovsky/gitv' " Extra insight power in Git related tasks. Uses fugitive. Forked version with bug fix
+Plugin 'terryma/vim-expand-region' " Quickly select increasingly larger regions of text
+Plugin 'kana/vim-textobj-user' " Support custom text objects. For vim-expand-region
+Plugin 'kana/vim-textobj-line' " Current line text object
+Plugin 'kana/vim-textobj-entire' " Entire buffer text object
 
 " All of your Plugins must be added before the following line
 call vundle#end()            " required
@@ -53,7 +57,8 @@ set binary
 au BufNewFile * set noeol
 
 " Basic
-set number " Show line numbers
+set number " Show absolute line numbers
+set relativenumber " ... and show relative as well. So called 'hybrid mode'
 set ruler " Show line and column number
 syntax enable " Turn on syntax highlighting allowing local overrides
 set encoding=utf-8 " Set default encoding to UTF-8
