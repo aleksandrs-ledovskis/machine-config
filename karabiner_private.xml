@@ -1,0 +1,8 @@
+<?xml version="1.0"?>
+<root>
+    <item>
+      <name>Double Press Control_L = Escape</name>
+      <identifier>private.double_ctrl_l_to_escape</identifier>
+	  <autogen>__DoublePressModifier__ KeyCode::CONTROL_L, KeyCode::CONTROL_L, KeyCode::ESCAPE</autogen>
+    </item>
+</root>

@@ -94,10 +94,14 @@ casks=(
   bettertouchtool
   ## Disk space analyzer/treemap viewer
   disk-inventory-x
+  ## Keyboard mapping customizer. Goes hand in hand with Seil
+  karabiner
   ## File archiver. Happily munges through all popular and obscure formats (e.g. RAR)
   keka
   ## Menubar status insights
   menumeters
+  ## Keyboard driver patch/advanced config tool. Allows remapping of CapsLock. Used in combination with Karabiner
+  seil
   ## X11 for Mac
   xquartz
 
