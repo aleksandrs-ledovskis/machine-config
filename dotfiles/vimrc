@@ -34,12 +34,13 @@ Plugin 'mattn/emmet-vim' " HTML & CSS zen coding (ultra-fast expansion)
 Plugin 'embear/vim-localvimrc' " Local custom/per-project .lvimrc files
 Plugin 'editorconfig/editorconfig-vim' " EditorConfig support (editor agnostic format configs)
 Plugin 'chriskempson/base16-vim' " Base16 color scheme support
-Plugin 'Yggdroot/indentLine' " Highlight indentation lines
 Plugin 'aledovsky/gitv' " Extra insight power in Git related tasks. Uses fugitive. Forked version with bug fix
 Plugin 'terryma/vim-expand-region' " Quickly select increasingly larger regions of text
 Plugin 'kana/vim-textobj-user' " Support custom text objects. For vim-expand-region
 Plugin 'kana/vim-textobj-line' " Current line text object
 Plugin 'kana/vim-textobj-entire' " Entire buffer text object
+Plugin 'junegunn/vim-easy-align' " Alignment plugin with nice list of bundled rules (e.g. can handle Ruby 1.9+ hash OOB)
+Plugin 'nathanaelkane/vim-indent-guides' " Display indent guides as color blocks
 
 " All of your Plugins must be added before the following line
 call vundle#end()            " required
@@ -181,9 +182,17 @@ python del powerline_setup
 set laststatus=2 " Always display the statusline in all windows
 set noshowmode " Hide the default mode text (e.g. -- INSERT -- below the statusline)
 
-" indentLine
-let g:indentLine_color_term = 236
-let g:indentLine_char= ""
+" EasyAlign
+" Start interactive EasyAlign in visual mode (e.g. vip<Enter>)
+vmap <Enter> <Plug>(EasyAlign)
+" Start interactive EasyAlign for a motion/text object (e.g. gaip)
+nmap ga <Plug>(EasyAlign)
+
+" Indent Guides
+let g:indent_guides_enable_on_vim_startup = 1 " Autorun
+let g:indent_guides_auto_colors = 0 " Allow custom colors for terminal Vim
+autocmd VimEnter,Colorscheme * :hi IndentGuidesOdd  guibg=black ctermbg=234
+autocmd VimEnter,Colorscheme * :hi IndentGuidesEven guibg=white ctermbg=235
 
 " Tarpit - useful, but slow features. Left for testing in future Vim versions
 "set cursorline
