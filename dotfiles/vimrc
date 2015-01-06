@@ -41,6 +41,7 @@ Plugin 'kana/vim-textobj-line' " Current line text object
 Plugin 'kana/vim-textobj-entire' " Entire buffer text object
 Plugin 'junegunn/vim-easy-align' " Alignment plugin with nice list of bundled rules (e.g. can handle Ruby 1.9+ hash OOB)
 Plugin 'nathanaelkane/vim-indent-guides' " Display indent guides as color blocks
+Plugin 'jeffkreeftmeijer/vim-numbertoggle' " Toggle between relative and absolute line numbers automatically
 
 " All of your Plugins must be added before the following line
 call vundle#end()            " required
@@ -193,6 +194,9 @@ let g:indent_guides_enable_on_vim_startup = 1 " Autorun
 let g:indent_guides_auto_colors = 0 " Allow custom colors for terminal Vim
 autocmd VimEnter,Colorscheme * :hi IndentGuidesOdd  guibg=black ctermbg=234
 autocmd VimEnter,Colorscheme * :hi IndentGuidesEven guibg=white ctermbg=235
+
+" numbertoggle
+let g:NumberToggleTrigger="<F3>" " Switch between hybrid and absolute numbering
 
 " Tarpit - useful, but slow features. Left for testing in future Vim versions
 "set cursorline
