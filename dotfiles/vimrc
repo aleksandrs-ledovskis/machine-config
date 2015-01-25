@@ -34,7 +34,7 @@ Plugin 'mattn/emmet-vim' " HTML & CSS zen coding (ultra-fast expansion)
 Plugin 'embear/vim-localvimrc' " Local custom/per-project .lvimrc files
 Plugin 'editorconfig/editorconfig-vim' " EditorConfig support (editor agnostic format configs)
 Plugin 'chriskempson/base16-vim' " Base16 color scheme support
-Plugin 'aledovsky/gitv' " Extra insight power in Git related tasks. Uses fugitive. Forked version with bug fix
+Plugin 'gregsexton/gitv' " Extra insight power in Git related tasks. Uses fugitive.
 Plugin 'terryma/vim-expand-region' " Quickly select increasingly larger regions of text
 Plugin 'kana/vim-textobj-user' " Support custom text objects. For vim-expand-region
 Plugin 'kana/vim-textobj-line' " Current line text object
