@@ -40,6 +40,8 @@ brews=(
   watchman
   ## Tag creator. Keeps index of definitions
   ctags
+  ## TLS toolkit
+  openssl
 
   # JS
   ## Compressor and linter
@@ -48,6 +50,12 @@ brews=(
   nvm
 
   # Misc
+  ## wget(1) on steroids
+  aria2
+  ## Graphics toolkit
+  imagemagick
+  ## Periodical command execution
+  watch
   ## .rpm extraction
   rpm2cpio
   ## CLI IRC client
@@ -86,6 +94,8 @@ casks=(
   sourcetree
   ## Virtual development environment management
   vagrant
+  ## OS virtualization package
+  virtualbox
   ## Packet analyzer
   wireshark
 
@@ -108,6 +118,8 @@ casks=(
   # Misc
   ## 3D graphics workbench [3ds Max]
   blender
+  ## E-book library management
+  calibre
   ## Free diagram builder [Visio]
   dia
   ## Automatic display color management
@@ -122,6 +134,8 @@ casks=(
   libreoffice
   ## IM client
   skype
+  ## Spiffy music streaming
+  spotify
   ## Desktop sharing/remote control
   teamviewer
   ## BitTorrent client
