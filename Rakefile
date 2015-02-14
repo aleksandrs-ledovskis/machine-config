@@ -1,167 +1,178 @@
-#!/usr/bin/env zsh
+desc "Homebrew taps setup"
+task :homebrew_taps do
+  # Caskroom
+  `brew tap caskroom/cask`
+  # Neovim
+  `brew tap neovim/homebrew-neovim`
+end
 
-#########
-# BREWS #
-#########
+desc "Homebrew package install & update"
+task homebrew: %i(homebrew_update homebrew_upgrade)  do
+  Rake::Task["homebrew_install_packages"].invoke
+end
 
-brews=(
+task :homebrew_install_packages do
+  BREWS.each do |package|
+    `brew install #{package}`
+  end
+
+  CASKS.each do |package|
+    `brew cask install #{package}`
+  end
+
+  Rake::Task["homebrew_cleanup"].invoke
+end
+
+task :homebrew_cleanup do
+  `brew cleanup`
+end
+
+task :homebrew_update do
+  `brew update`
+end
+
+task :homebrew_upgrade do
+  `brew upgrade`
+end
+
+########################################
+
+BREWS = [
   # Ruby
-  ## Tool for ing Ruby from source
-  ruby-build
+  ## Tool for installing Ruby from source
+  "ruby-build",
   ## Ruby version manager
-  chruby
+  "chruby",
   ## Featherweight gemset-like provider
-  gem_home
+  "--HEAD https://raw.github.com/postmodern/gem_home/master/homebrew/gem_home.rb",
 
   # Cache
   ## Memory-based object store
-  memcached
+  "memcached",
 
   # DB
   ## Small, embedded database
-  sqlite
+  "sqlite",
   ## General purpose RDBMS
-  mysql
+  "mysql",
 
   # Dev stuff
   ## Editor
-  vim
+  "vim",
+  ## Editor
+  "--HEAD neovim",
   ## The DVCS
-  git
+  "git",
   ## Terminal multiplexer. Split console windows and stuff
-  tmux
+  "tmux",
   ## OS X specific trick to allow copy/pastes work from CLI
-  reattach-to-user-namespace
+  "reattach-to-user-namespace",
   ## Fuzzy file content searcher, like grep only 1000x faster
-  the_silver_searcher
+  "the_silver_searcher",
   ## Tiny bit faster `the_silver_searcher`
-  the_platinum_searcher
+  "the_platinum_searcher",
   ## Fuzzy file name searcher
-  watchman
+  "watchman",
   ## Tag creator. Keeps index of definitions
-  ctags
+  "ctags",
   ## TLS toolkit
-  openssl
+  "openssl",
 
   # JS
   ## Compressor and linter
-  closure-compiler
+  "closure-compiler",
   ## Node version manager
-  nvm
+  "nvm",
 
   # Misc
   ## wget(1) on steroids
-  aria2
+  "aria2",
   ## Graphics toolkit
-  imagemagick
+  "imagemagick",
   ## Periodical command execution
-  watch
+  "watch",
   ## .rpm extraction
-  rpm2cpio
+  "rpm2cpio",
   ## CLI IRC client
-  weechat
+  "weechat",
   ## Password generator
-  pwgen
+  "pwgen",
   ## Assorted pack of various small Unix utilities
-  moreutils
+  "moreutils",
   ## top(1) on steroids
-  htop-osx
+  "htop-osx",
   ## Random git utilities
-  git-extras
+  "git-extras",
   ## Speed up directory traversal
-  z
+  "z",
   ## Retrieval of files across various protocols
-  wget
+  "wget",
   ## CLI hex viewer
-  dhex
+  "dhex",
   ## Cleanup filenames with weird characters
-  detox
+  "detox",
   ## Collection of usefull non-standard tools
-  moreutils
+  "moreutils",
   ## CLI disk usage viewer
-  ncdu
-)
+  "ncdu",
+]
 
-#########
-# CASKS #
-#########
-
-casks=(
+CASKS = [
   # Dev stuff
   ## LDAP workhorse
-  apache-directory-studio
+  "apache-directory-studio",
   ## Git GUI for visualizing those tens of parallel flows
-  sourcetree
+  "sourcetree",
   ## Virtual development environment management
-  vagrant
+  "vagrant",
   ## OS virtualization package
-  virtualbox
+  "virtualbox",
   ## Packet analyzer
-  wireshark
+  "wireshark",
 
   # OS X
   ## Multi-button mouse savior
-  bettertouchtool
+  "bettertouchtool",
   ## Disk space analyzer/treemap viewer
-  disk-inventory-x
+  "disk-inventory-x",
   ## Keyboard mapping customizer. Goes hand in hand with Seil
-  karabiner
+  "karabiner",
   ## File archiver. Happily munges through all popular and obscure formats (e.g. RAR)
-  keka
+  "keka",
   ## Menubar status insights
-  menumeters
+  "menumeters",
   ## Keyboard driver patch/advanced config tool. Allows remapping of CapsLock. Used in combination with Karabiner
-  seil
+  "seil",
   ## X11 for Mac
-  xquartz
+  "xquartz",
 
   # Misc
   ## 3D graphics workbench [3ds Max]
-  blender
+  "blender",
   ## E-book library management
-  calibre
+  "calibre",
   ## Free diagram builder [Visio]
-  dia
+  "dia",
   ## Automatic display color management
-  flux
+  "flux",
   ## Free 2D raster graphics editor [Photoshop]
-  gimp
+  "gimp",
   ## Google Hangouts Screenshare enablement browser extensions
-  google-hangouts
+  "google-hangouts",
   ## Free vector graphics editor [Illustrator]
-  inkscape
+  "inkscape",
   ## Free office suite [Office]
-  libreoffice
+  "libreoffice",
   ## IM client
-  skype
+  "skype",
   ## Spiffy music streaming
-  spotify
+  "spotify",
   ## Desktop sharing/remote control
-  teamviewer
+  "teamviewer",
   ## BitTorrent client
-  transmission
+  "transmission",
   ## Install disk images of flash drives
-  unetbootin
+  "unetbootin",
   ## Media player, hadling anything thrown at it
-  vlc
-)
-
-###########
-###########
-###########
-
-brew update
-brew upgrade
-
-for package in $brews
-do
-  brew install $package
-done
-
-brew tap caskroom/cask
-for package in $casks
-do
-  brew cask install $package
-done
-
-brew cleanup
+  "vlc",
+]
