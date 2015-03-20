@@ -59,7 +59,7 @@ BREWS = [
   # Dev stuff
   ## Editor
   "vim",
-  ## Editor
+  ## Incumbent editor
   "--HEAD neovim",
   ## The DVCS
   "git",
@@ -135,6 +135,8 @@ CASKS = [
   "bettertouchtool",
   ## Disk space analyzer/treemap viewer
   "disk-inventory-x",
+  ## DNS encryption. Secure lookups against first-hop MITM's (e.g. public access points messing with/blocking some sites)
+  "dnscrypt",
   ## Keyboard mapping customizer. Goes hand in hand with Seil
   "karabiner",
   ## File archiver. Happily munges through all popular and obscure formats (e.g. RAR)
