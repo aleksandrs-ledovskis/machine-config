@@ -55,6 +55,10 @@ BREWS = [
   "sqlite",
   ## General purpose RDBMS
   "mysql",
+  ## Solid ORDBMS
+  "postgresql",
+  ## Geographic object support for pgSQL
+  "postgis",
 
   # Dev stuff
   ## Editor
@@ -77,6 +81,16 @@ BREWS = [
   "ctags",
   ## TLS toolkit
   "openssl",
+  ## Compiler system
+  "gcc",
+  ## Dependecy library, parsing options in command lines
+  "popt",
+  ## Old school revision control system
+  "cvs",
+  ## Cartographic projection conversion library
+  "proj4",
+  ## Geospatial data format management library
+  "gdal",
 
   # JS
   ## Compressor and linter
@@ -121,6 +135,8 @@ CASKS = [
   # Dev stuff
   ## LDAP workhorse
   "apache-directory-studio",
+  ## GUI frontend to PostgreSQL
+  "pgadmin3",
   ## Git GUI for visualizing those tens of parallel flows
   "sourcetree",
   ## Virtual development environment management
