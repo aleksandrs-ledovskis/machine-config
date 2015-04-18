@@ -87,8 +87,8 @@ BREWS = [
   "popt",
   ## Old school revision control system
   "cvs",
-  ## Cartographic projection conversion library
-  "proj4",
+  ## Cartographic projection conversion library, Proj4
+  "proj",
   ## Geospatial data format management library
   "gdal",
 
@@ -153,6 +153,8 @@ CASKS = [
   "disk-inventory-x",
   ## DNS encryption. Secure lookups against first-hop MITM's (e.g. public access points messing with/blocking some sites)
   "dnscrypt",
+  ## Mac OS X build of Chromium
+  "freesmug-chromium",
   ## Keyboard mapping customizer. Goes hand in hand with Seil
   "karabiner",
   ## File archiver. Happily munges through all popular and obscure formats (e.g. RAR)

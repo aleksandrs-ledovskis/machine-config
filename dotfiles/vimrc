@@ -42,6 +42,7 @@ Plugin 'kana/vim-textobj-entire' " Entire buffer text object
 Plugin 'junegunn/vim-easy-align' " Alignment plugin with nice list of bundled rules (e.g. can handle Ruby 1.9+ hash OOB)
 Plugin 'nathanaelkane/vim-indent-guides' " Display indent guides as color blocks
 Plugin 'jeffkreeftmeijer/vim-numbertoggle' " Toggle between relative and absolute line numbers automatically
+Plugin 'slim-template/vim-slim' " Slim templating engine syntax highlight
 
 " All of your Plugins must be added before the following line
 call vundle#end()            " required
