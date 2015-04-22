@@ -91,6 +91,8 @@ BREWS = [
   "proj",
   ## Geospatial data format management library
   "gdal",
+  ## Solid web server & reverse proxy
+  "nginx",
 
   # JS
   ## Compressor and linter
