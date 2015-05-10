@@ -1,3 +1,11 @@
+# Install
+#  Bundler is not required
+#  Have rubygems >= 2.4 and run
+#  $ gem install [-V] -g --conservative --without development
+#
+# Update
+#  $ gem update [-V]
+
 source "https://rubygems.org"
 
 # Tmux session manager
