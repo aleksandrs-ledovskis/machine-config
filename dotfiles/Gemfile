@@ -1,0 +1,16 @@
+source "https://rubygems.org"
+
+# Tmux session manager
+gem "tmuxinator", "~> 0.6"
+
+# Automatic Ruby code style checking tool
+gem "rubocop", "~> 0.31"
+
+# Ruby code smell finder
+gem "reek", "~> 2.2"
+
+# Pretty print Ruby objects in REPLs
+gem "awesome_print", "~> 1.6"
+
+# Enhance git(1) with GitHub related knowledge
+gem "hub", "~> 1.12"
