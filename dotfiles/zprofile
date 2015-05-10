@@ -1,6 +1,7 @@
 # Chruby
 source $BREW_HOME/opt/chruby/share/chruby/chruby.sh
-chruby 2.1.4
+source $BREW_HOME/opt/chruby/share/chruby/auto.sh
+chruby 2.2.2
 
 # Node Version Manager (nvm)
 source $BREW_HOME/opt/nvm/nvm.sh
