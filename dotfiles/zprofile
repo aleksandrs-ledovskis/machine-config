@@ -6,7 +6,7 @@ chruby 2.2.2
 # Node Version Manager (nvm)
 source $BREW_HOME/opt/nvm/nvm.sh
 export NVM_DIR=~/.nvm
-nvm use iojs-v1.0.4 > /dev/null 2>&1
+nvm use iojs-v2.0.1 > /dev/null 2>&1
 
 # Oracle stuff
 export ORACLE_IC_HOME="$HOME/.oracle/instantclient_11_2"
