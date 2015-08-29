@@ -9,5 +9,9 @@ Dotfiles & similar stuff
 - [+] Acknowledge homebrew packages
 - [ ] Screenshots?
 
+### Misc
+
+`pip install neovim`
+
 ## Licence
 BSD-3

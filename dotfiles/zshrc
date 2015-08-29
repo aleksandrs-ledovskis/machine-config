@@ -19,7 +19,7 @@ plugins=(git extract bundler)
 # Aliases
 #
 
-alias v='nocorrect vim'
+alias v='nocorrect nvim'
 alias a='nocorrect ag'
 alias ssh='TERM=xterm ssh'
 alias gh='gem_home'
