@@ -16,13 +16,13 @@ Plug 'tpope/vim-endwise' " Somewhat better block construct/delimeter auto-placem
 Plug 'tpope/vim-commentary' " Trigger code comments easily
 Plug 'junegunn/vim-easy-align' " Alignment plugin with nice list of bundled rules (e.g. can handle Ruby 1.9+ hash OOB)
 Plug 'junegunn/fzf', { 'dir': '~/.fzf', 'do': 'yes \| ./install' } " Fuzzy file finder
-Plug 'scrooloose/syntastic' " Linter
 Plug 'vim-ruby/vim-ruby' " Edge version of Vim's Ruby syntax support
 Plug 'simnalamburt/vim-mundo' " Treeview of file changes. Fork of Gundo
 Plug 'jeffkreeftmeijer/vim-numbertoggle' " Toggle between relative and absolute line numbers automatically
 Plug 'christoomey/vim-tmux-navigator' " Fast switching between Vim <-> Tmux
 Plug 'airblade/vim-gitgutter' " Git diff in the gutter
 Plug 'ctrlpvim/ctrlp.vim' " For buffer management
+Plug 'benekastah/neomake'
 
 " Migrated from vimrc, but unreviewed
 Plug 'Colorizer--Brabandt' "  Display colors, as for example is CSS #F00B44 declarations
@@ -127,17 +127,19 @@ map <F2> :NERDTreeToggle<CR>
 nnoremap <F5> :GundoToggle<CR>
 " Enable persistent undo so that undo history persists across vim sessions
 set undofile
-set undodir=~/.nvim/undo
+set undodir=~/.nvim/_undo
 
-" Syntastic
-let g:syntastic_ruby_checkers = ['mri', 'reek', 'flog']
-let g:syntastic_aggregate_errors = 1 " Run all checkers and combine output
-let g:syntastic_always_populate_loc_list = 1 " Auto location list population with errors
-let g:syntastic_error_symbol = "✗"
-let g:syntastic_style_error_symbol = "✗"
-let g:syntastic_warning_symbol = "⚠"
-let g:syntastic_style_warning_symbol = "⚠"
-let g:syntastic_enable_highlighting = 1
+" Neomake
+let g:neomake_ruby_reek_maker_errorformat =
+        \ '%E%.%#: Racc::ParseError: %f:%l :: %m,' .
+        \ '%W%f:%l: %m'
+let g:neomake_ruby_reek_maker = {
+    \ 'args': ['--single-line'],
+    \ 'errorformat': g:neomake_ruby_reek_maker_errorformat,
+    \ }
+let g:neomake_ruby_enabled_makers = ['mri', 'rubocop', 'reek']
+autocmd! BufWritePost * Neomake " Run on file write
+nnoremap <Leader>l :lopen<CR>
 
 " numbertoggle
 let g:NumberToggleTrigger="<F3>" " Switch between hybrid and absolute numbering
@@ -225,4 +227,3 @@ let g:indent_guides_auto_colors = 1  " Allow custom colors for terminal Vim
 "Tarpit - useful, but slow features. Left for testing in future Vim versions
 "set cursorline
 "set cursorcolumn
-"let g:syntastic_echo_current_error = 1
