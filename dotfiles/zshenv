@@ -25,6 +25,5 @@ export SELENIUM_FIREFOX='/Applications/Firefox 3.6.28.app/Contents/MacOS/firefox
 
 # Fzf
 export FZF_DEFAULT_COMMAND='
-  (git ls-tree -r --name-only HEAD ||
-   find * -name ".*" -prune -o -type f -print -o -type l -print) 2> /dev/null'
+  (find * -name ".*" -prune -o -type f -print -o -type l -print) 2> /dev/null'
 export FZF_DEFAULT_OPTS="--extended --cycle"
