@@ -2,6 +2,9 @@
 # Local ENV vars
 #
 
+# Some secret sauce
+source $HOME/.private_env.sh
+
 # Custom theme
 ZSH_THEME="aledovsky"
 DEFAULT_USER=$USER
@@ -23,6 +26,7 @@ alias v='nocorrect nvim'
 alias a='nocorrect ag'
 alias ssh='TERM=xterm ssh'
 alias gh='gem_home'
+alias vpn="sudo openconnect --config=$HOME/.openconnect.conf $OPENCONNECT_SERVER"
 
 #
 # Sourcings

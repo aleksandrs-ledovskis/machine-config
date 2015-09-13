@@ -131,6 +131,8 @@ BREWS = [
   "moreutils",
   ## CLI disk usage viewer
   "ncdu",
+  ## Adequate (and OSS) version of Cisco AnyConnect VPN software
+  "openconnect",
 ]
 
 CASKS = [
