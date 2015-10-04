@@ -1,0 +1,8 @@
+# Editor-agnostic config. See http://editorconfig.org/
+
+# Project's main config
+root = true
+
+[iterm2/*.plist]
+indent_style = space
+indent_size  = 2
