@@ -69,8 +69,6 @@ BREWS = [
   "git",
   ## Terminal multiplexer. Split console windows and stuff
   "tmux",
-  ## OS X specific trick to allow copy/pastes work from CLI
-  "reattach-to-user-namespace",
   ## Fuzzy file content searcher, like grep only 1000x faster
   "the_silver_searcher",
   ## Tiny bit faster `the_silver_searcher`
