@@ -92,6 +92,8 @@ set mouse-=a  " Disable mouse
 set mousehide " Hide mouse after chars typed
 set splitbelow " Horizontal split - current pane stays on top
 set splitright " Vertical split - current pane is on left side
+set cursorline " Visually show current cursor line
+set cursorcolumn " Visually show current cursor column
 
 " Colors
 let $NVIM_TUI_ENABLE_TRUE_COLOR=1 " Enable 24-bit colors
@@ -130,6 +132,7 @@ set undofile
 set undodir=~/.nvim/_undo
 
 " Neomake
+"" Ruby
 let g:neomake_ruby_reek_maker_errorformat =
         \ '%E%.%#: Racc::ParseError: %f:%l :: %m,' .
         \ '%W%f:%l: %m'
@@ -138,6 +141,8 @@ let g:neomake_ruby_reek_maker = {
     \ 'errorformat': g:neomake_ruby_reek_maker_errorformat,
     \ }
 let g:neomake_ruby_enabled_makers = ['mri', 'rubocop', 'reek']
+"" JavaScript
+let g:neomake_javascript_enabled_makers = ['eslint']
 autocmd! BufWritePost * Neomake " Run on file write
 nnoremap <Leader>l :lopen<CR>
 
@@ -223,7 +228,3 @@ nmap ga <Plug>(EasyAlign)
 " Indent Guides
 let g:indent_guides_enable_on_vim_startup = 1 "  Autorun
 let g:indent_guides_auto_colors = 1  " Allow custom colors for terminal Vim
-
-"Tarpit - useful, but slow features. Left for testing in future Vim versions
-"set cursorline
-"set cursorcolumn
