@@ -4,6 +4,8 @@ task :homebrew_taps do
   `brew tap caskroom/cask`
   # Neovim
   `brew tap neovim/homebrew-neovim`
+  # Tmux with TrueColor support
+  `brew tap aleksandrs-ledovskis/tmux-tc https://github.com/aleksandrs-ledovskis/tmux-tc.git`
 end
 
 desc "Homebrew package install & update"
@@ -62,19 +64,13 @@ BREWS = [
 
   # Dev stuff
   ## Editor
-  "vim",
-  ## Incumbent editor
   "--HEAD neovim",
   ## The DVCS
-  "git",
-  ## Terminal multiplexer. Split console windows and stuff
-  "tmux",
+  "git --with-brewed-openssl --with-brewed-svn",
+  ## Terminal multiplexer. Split console windows and stuff (With custom patches)
+  "tmux-tc",
   ## Fuzzy file content searcher, like grep only 1000x faster
   "the_silver_searcher",
-  ## Tiny bit faster `the_silver_searcher`
-  "the_platinum_searcher",
-  ## Fuzzy file name searcher
-  "watchman",
   ## Tag creator. Keeps index of definitions
   "ctags",
   ## TLS toolkit
@@ -83,8 +79,12 @@ BREWS = [
   "gcc",
   ## Dependecy library, parsing options in command lines
   "popt",
-  ## Old school revision control system
+  ## Prehistoric revision control system
   "cvs",
+  ## Old school revision control system
+  "svn",
+  ## Alternate revision control system
+  "hg",
   ## Cartographic projection conversion library, Proj4
   "proj",
   ## Geospatial data format management library
@@ -161,8 +161,8 @@ CASKS = [
   "karabiner",
   ## File archiver. Happily munges through all popular and obscure formats (e.g. RAR)
   "keka",
-  ## Menubar status insights
-  "menumeters",
+  ## Menubar status insights (for OS X 10.11+)
+  "yujitach-menumeters",
   ## Keyboard driver patch/advanced config tool. Allows remapping of CapsLock. Used in combination with Karabiner
   "seil",
   ## X11 for Mac
