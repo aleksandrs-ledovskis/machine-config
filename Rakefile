@@ -85,12 +85,16 @@ BREWS = [
   "svn",
   ## Alternate revision control system
   "hg",
+  ## Somewhat uncommon revision control system
+  "bzr",
   ## Cartographic projection conversion library, Proj4
   "proj",
   ## Geospatial data format management library
   "gdal",
   ## Solid web server & reverse proxy
   "nginx",
+  ## Scripting programming language. Version 3 is sometimes needed as dependency
+  "python3",
 
   # JS
   ## Compressor and linter
@@ -131,6 +135,8 @@ BREWS = [
   "ncdu",
   ## Adequate (and OSS) version of Cisco AnyConnect VPN software
   "openconnect",
+  ## Commodore 64 emulator
+  "vice",
 ]
 
 CASKS = [
@@ -179,6 +185,8 @@ CASKS = [
   "flux",
   ## Free 2D raster graphics editor [Photoshop]
   "gimp",
+  ## Alternative game client
+  "gog-galaxy",
   ## Google Hangouts Screenshare enablement browser extensions
   "google-hangouts",
   ## Free vector graphics editor [Illustrator]
@@ -189,6 +197,8 @@ CASKS = [
   "skype",
   ## Spiffy music streaming
   "spotify",
+  ## Game client
+  "steam",
   ## Desktop sharing/remote control
   "teamviewer",
   ## BitTorrent client
