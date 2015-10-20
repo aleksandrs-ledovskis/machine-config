@@ -92,7 +92,6 @@ set mouse-=a  " Disable mouse
 set mousehide " Hide mouse after chars typed
 set splitbelow " Horizontal split - current pane stays on top
 set splitright " Vertical split - current pane is on left side
-set cursorline " Visually show current cursor line
 set cursorcolumn " Visually show current cursor column
 
 " Colors
@@ -100,6 +99,14 @@ let $NVIM_TUI_ENABLE_TRUE_COLOR=1 " Enable 24-bit colors
 set background=dark " Make vim dark-terminal friendlier
 "set guicolors
 colorscheme base16-twilight " Specific color scheme from Base16 collection
+
+" Cursorline
+set cursorline " Visually show current cursor line
+hi cursorline cterm=none term=none
+autocmd WinEnter * setlocal cursorline cursorcolumn
+autocmd WinLeave * setlocal nocursorline nocursorcolumn
+highlight CursorLine guibg=#303000 ctermbg=234
+highlight CursorColumn guibg=#303000 ctermbg=234
 
 " Speedups
 let mapleader = "\<Space>"
