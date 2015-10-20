@@ -207,7 +207,7 @@
 		BAtzdHJlYW10eXBlZIHoA4QBQISEhAhOU1N0cmluZwGEhAhOU09iamVjdACF
 		hAErATGG
 		</data>
-		<string>307</string>
+		<string>322</string>
 	</array>
 	<key>NSTableView Hidden Columns KeyBingingTable</key>
 	<array/>
@@ -232,17 +232,17 @@
 	<key>NSWindow Frame NSFontPanel</key>
 	<string>185 173 1028 300 0 0 1440 900 </string>
 	<key>NSWindow Frame Preferences</key>
-	<string>287 414 606 456 0 0 1440 877 </string>
+	<string>2006 1996 606 456 1919 580 1080 1897 </string>
 	<key>NSWindow Frame SUStatusFrame</key>
-	<string>507 2003 400 129 -573 900 2560 1600 </string>
+	<string>562 263 400 129 0 0 1440 900 </string>
 	<key>NSWindow Frame SUUpdateAlert</key>
 	<string>410 364 620 392 0 0 1440 877 </string>
 	<key>NSWindow Frame SUUpdateAlertFrame</key>
 	<string>432 364 575 392 0 0 1440 877 </string>
 	<key>NSWindow Frame iTerm Window 0</key>
-	<string>356 94 879 747 0 0 1440 877 </string>
+	<string>189 450 570 427 0 0 1440 877 </string>
 	<key>NSWindow Frame iTerm Window 1</key>
-	<string>735 423 585 427 0 0 1440 877 </string>
+	<string>403 473 570 427 0 0 1440 877 </string>
 	<key>NSWindow Frame iTerm Window 2</key>
 	<string>274 450 585 427 0 0 1440 877 </string>
 	<key>NSWindow Frame iTerm Window 3</key>
@@ -425,8 +425,6 @@
 			</dict>
 			<key>Background Image Is Tiled</key>
 			<false/>
-			<key>Background Image Location</key>
-			<string></string>
 			<key>Badge Color</key>
 			<dict>
 				<key>Alpha Component</key>
@@ -866,7 +864,7 @@
 			<key>Rows</key>
 			<integer>25</integer>
 			<key>Screen</key>
-			<integer>-1</integer>
+			<integer>-2</integer>
 			<key>Scrollback Lines</key>
 			<integer>10000</integer>
 			<key>Scrollback With Status Bar</key>
@@ -1021,6 +1019,8 @@
 			<false/>
 			<key>Use Cursor Guide</key>
 			<false/>
+			<key>Use HFS Plus Mapping</key>
+			<false/>
 			<key>Use Italic Font</key>
 			<false/>
 			<key>Use Non-ASCII Font</key>
@@ -1030,7 +1030,7 @@
 			<key>Visual Bell</key>
 			<true/>
 			<key>Window Type</key>
-			<integer>0</integer>
+			<integer>1</integer>
 			<key>Working Directory</key>
 			<string></string>
 		</dict>
@@ -1097,7 +1097,7 @@
 	<key>SUHasLaunchedBefore</key>
 	<true/>
 	<key>SULastCheckTime</key>
-	<date>2015-10-04T10:30:28Z</date>
+	<date>2015-10-06T20:18:23Z</date>
 	<key>SavePasteHistory</key>
 	<false/>
 	<key>Secure Input</key>
@@ -1111,7 +1111,7 @@
 	<key>SmartPlacement</key>
 	<false/>
 	<key>SplitPaneDimmingAmount</key>
-	<real>0.40000000596046448</real>
+	<real>0.25335787259615383</real>
 	<key>SwitchTabModifier</key>
 	<integer>4</integer>
 	<key>SwitchWindowModifier</key>
@@ -1147,6 +1147,6 @@
 	<key>findRegex_iTerm</key>
 	<false/>
 	<key>iTerm Version</key>
-	<string>2.9.20151002-nightly</string>
+	<string>2.9.20151005-nightly</string>
 </dict>
 </plist>
