@@ -93,6 +93,8 @@ set mousehide " Hide mouse after chars typed
 set splitbelow " Horizontal split - current pane stays on top
 set splitright " Vertical split - current pane is on left side
 set cursorcolumn " Visually show current cursor column
+set lazyredraw " This makes hybrid (relative) numbering usable for some larger files
+set regexpengine=1 " Ditto, above
 
 " Colors
 let $NVIM_TUI_ENABLE_TRUE_COLOR=1 " Enable 24-bit colors
