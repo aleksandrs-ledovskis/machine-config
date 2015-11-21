@@ -142,13 +142,6 @@ set undodir=~/.nvim/_undo
 
 " Neomake
 "" Ruby
-let g:neomake_ruby_reek_maker_errorformat =
-        \ '%E%.%#: Racc::ParseError: %f:%l :: %m,' .
-        \ '%W%f:%l: %m'
-let g:neomake_ruby_reek_maker = {
-    \ 'args': ['--single-line'],
-    \ 'errorformat': g:neomake_ruby_reek_maker_errorformat,
-    \ }
 let g:neomake_ruby_enabled_makers = ['mri', 'rubocop', 'reek']
 "" JavaScript
 let g:neomake_javascript_enabled_makers = ['eslint']
