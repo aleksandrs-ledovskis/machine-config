@@ -6,6 +6,8 @@ task :homebrew_taps do
   `brew tap neovim/homebrew-neovim`
   # Tmux with TrueColor support
   `brew tap aleksandrs-ledovskis/tmux-tc https://github.com/aleksandrs-ledovskis/tmux-tc.git`
+  # Alternate Cask software versions
+  `brew tap caskroom/versions`
 end
 
 desc "Homebrew package install & update"
@@ -143,6 +145,8 @@ CASKS = [
   # Dev stuff
   ## LDAP workhorse
   "apache-directory-studio",
+  ## Mercurial (hg) GUI
+  "machg",
   ## GUI frontend to PostgreSQL
   "pgadmin3",
   ## Git GUI for visualizing those tens of parallel flows
@@ -155,6 +159,8 @@ CASKS = [
   "wireshark",
 
   # OS X
+  ## IM client (using dev branch; v1.6)
+  "adium-nightly16",
   ## Multi-button mouse savior
   "bettertouchtool",
   ## Disk space analyzer/treemap viewer
@@ -185,8 +191,6 @@ CASKS = [
   "flux",
   ## Free 2D raster graphics editor [Photoshop]
   "gimp",
-  ## Alternative game client
-  "gog-galaxy",
   ## Google Hangouts Screenshare enablement browser extensions
   "google-hangouts",
   ## Free vector graphics editor [Illustrator]
@@ -195,10 +199,6 @@ CASKS = [
   "libreoffice",
   ## IM client
   "skype",
-  ## Spiffy music streaming
-  "spotify",
-  ## Game client
-  "steam",
   ## Desktop sharing/remote control
   "teamviewer",
   ## BitTorrent client
