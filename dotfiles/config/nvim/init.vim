@@ -15,7 +15,8 @@ Plug 'tpope/vim-rails'  " Rails syntax support & spec generators
 Plug 'tpope/vim-endwise' " Somewhat better block construct/delimeter auto-placement
 Plug 'tpope/vim-commentary' " Trigger code comments easily
 Plug 'junegunn/vim-easy-align' " Alignment plugin with nice list of bundled rules (e.g. can handle Ruby 1.9+ hash OOB)
-Plug 'junegunn/fzf', { 'dir': '~/.fzf', 'do': 'yes \| ./install' } " Fuzzy file finder
+Plug 'junegunn/fzf', { 'dir': '~/.fzf', 'do': 'yes \| ./install' } " Fuzzy file finder (binary & basic vim support)
+Plug 'junegunn/fzf.vim' " Advanced fzf <-> vim integration 
 Plug 'vim-ruby/vim-ruby' " Edge version of Vim's Ruby syntax support
 Plug 'simnalamburt/vim-mundo' " Treeview of file changes. Fork of Gundo
 Plug 'jeffkreeftmeijer/vim-numbertoggle' " Toggle between relative and absolute line numbers automatically
