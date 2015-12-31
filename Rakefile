@@ -97,6 +97,8 @@ BREWS = [
   "nginx",
   ## Scripting programming language. Version 3 is sometimes needed as dependency
   "python3",
+  # Go programming language
+  "go",
 
   # JS
   ## Compressor and linter
@@ -139,6 +141,12 @@ BREWS = [
   "openconnect",
   ## Commodore 64 emulator
   "vice",
+  # Taskwarrior, to-do tracker
+  "task",
+  # Taskwarrior shell
+  "tasksh",
+  # nc(1) on steroids
+  "socat",
 ]
 
 CASKS = [
