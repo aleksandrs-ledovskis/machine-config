@@ -6,7 +6,8 @@ set nocompatible " turn off vi mode
 filetype off " Disable filetype detection for duration of Plug loading
 call plug#begin('~/.nvim/plugged')
 
-Plug 'bling/vim-airline' " Statusbar/tabline. Powerline replacement
+Plug 'vim-airline/vim-airline' " Statusbar/tabline. Powerline replacement
+Plug 'vim-airline/vim-airline-themes' " Statusbar/tabline. Powerline replacement
 Plug 'mileszs/ack.vim' " Grep-like searcher, using Ack/Ag
 Plug 'scrooloose/nerdtree' " File treeview browser
 Plug 'chriskempson/base16-vim' " Base16 color scheme support
@@ -131,6 +132,7 @@ let g:airline_powerline_fonts = 1 " Enable fancy fonts
 let g:airline#extensions#tabline#enabled = 1 " Enable smarter tabline
 let g:airline#extensions#tabline#tab_nr_type = 1 " Show tab number
 let g:airline#extensions#tabline#show_close_button = 0 " Don't need no buttons
+let g:airline_theme = 'molokai'
 
 " NERDTree
 map <F2> :NERDTreeToggle<CR>
