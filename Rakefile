@@ -205,6 +205,8 @@ CASKS = [
   "inkscape",
   ## Free office suite [Office]
   "libreoffice",
+  ## Weather info display in menubar
+  "meteorologist",
   ## IM client
   "skype",
   ## Desktop sharing/remote control
