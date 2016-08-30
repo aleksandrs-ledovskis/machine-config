@@ -99,7 +99,7 @@ set lazyredraw " This makes hybrid (relative) numbering usable for some larger f
 set regexpengine=1 " Ditto, above
 
 " Colors
-let $NVIM_TUI_ENABLE_TRUE_COLOR=1 " Enable 24-bit colors
+set termguicolors " Enable 24-bit colors (since acc5d08/0.1.5)
 set background=dark " Make vim dark-terminal friendlier
 "set guicolors
 colorscheme base16-twilight " Specific color scheme from Base16 collection
