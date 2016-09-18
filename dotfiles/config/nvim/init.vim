@@ -25,6 +25,7 @@ Plug 'christoomey/vim-tmux-navigator' " Fast switching between Vim <-> Tmux
 Plug 'airblade/vim-gitgutter' " Git diff in the gutter
 Plug 'ctrlpvim/ctrlp.vim' " For buffer management
 Plug 'benekastah/neomake'
+Plug 'kchmck/vim-coffee-script' " CoffeeScript support
 
 " Migrated from vimrc, but unreviewed
 Plug 'Colorizer--Brabandt' "  Display colors, as for example is CSS #F00B44 declarations
@@ -201,7 +202,7 @@ endfunction
 " Migrated stuff
 
 " Colorizer
-let g:colorizer_auto_filetype='css,html,erb'
+let g:colorizer_auto_filetype='css,scss,html,erb'
 
 " Tagbar
 noremap <Leader>rt :TagbarToggle<CR>
