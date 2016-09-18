@@ -177,14 +177,12 @@ CASKS = [
   "dnscrypt",
   ## Mac OS X build of Chromium
   "freesmug-chromium",
-  ## Keyboard mapping customizer. Goes hand in hand with Seil
-  "karabiner",
+  ## Keyboard mapping customizer. macOS 10.12 compatible. Not yet in Homebrew
+  # "karabiner-elements",
   ## File archiver. Happily munges through all popular and obscure formats (e.g. RAR)
   "keka",
   ## Menubar status insights (for OS X 10.11+)
   "yujitach-menumeters",
-  ## Keyboard driver patch/advanced config tool. Allows remapping of CapsLock. Used in combination with Karabiner
-  "seil",
   ## X11 for Mac
   "xquartz",
 
