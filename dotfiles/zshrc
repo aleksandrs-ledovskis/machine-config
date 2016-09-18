@@ -1,3 +1,15 @@
+# Chruby
+source $BREW_HOME/opt/chruby/share/chruby/chruby.sh
+source $BREW_HOME/opt/chruby/share/chruby/auto.sh
+
+# Node Version Manager (nvm)
+source $BREW_HOME/opt/nvm/nvm.sh
+export NVM_DIR=~/.nvm
+nvm use iojs-v2.0.1 > /dev/null 2>&1
+
+# Oracle stuff. DYLD magic requires disabled System Integrity Protection
+export ORACLE_IC_HOME="$HOME/.oracle/instantclient_11_2"
+export DYLD_LIBRARY_PATH=$ORACLE_IC_HOME:$DYLD_LIBRARY_PATH
 #
 # Local ENV vars
 #
