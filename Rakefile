@@ -57,8 +57,6 @@ BREWS = [
   # DB
   ## Small, embedded database
   "sqlite",
-  ## General purpose RDBMS
-  "mysql",
   ## Solid ORDBMS
   "postgresql",
   ## Geographic object support for pgSQL
@@ -66,11 +64,11 @@ BREWS = [
 
   # Dev stuff
   ## Editor
-  "--HEAD neovim",
+  "neovim",
   ## The DVCS
   "git --with-brewed-openssl --with-brewed-svn",
-  ## Terminal multiplexer. Split console windows and stuff (With custom patches)
-  "tmux-tc",
+  ## Terminal multiplexer. Split console windows and stuff
+  "tmux",
   ## Fuzzy file content searcher, like grep only 1000x faster
   "the_silver_searcher",
   ## Tag creator. Keeps index of definitions
@@ -115,8 +113,6 @@ BREWS = [
   "watch",
   ## .rpm extraction
   "rpm2cpio",
-  ## CLI IRC client
-  "weechat",
   ## Password generator
   "pwgen",
   ## Assorted pack of various small Unix utilities
@@ -131,16 +127,10 @@ BREWS = [
   "wget",
   ## CLI hex viewer
   "dhex",
-  ## Cleanup filenames with weird characters
-  "detox",
-  ## Collection of usefull non-standard tools
-  "moreutils",
   ## CLI disk usage viewer
   "ncdu",
   ## Adequate (and OSS) version of Cisco AnyConnect VPN software
   "openconnect",
-  ## Commodore 64 emulator
-  "vice",
   # Taskwarrior, to-do tracker
   "task",
   # Taskwarrior shell
@@ -153,12 +143,10 @@ CASKS = [
   # Dev stuff
   ## LDAP workhorse
   "apache-directory-studio",
-  ## Mercurial (hg) GUI
-  "machg",
   ## GUI frontend to PostgreSQL
   "pgadmin3",
-  ## Git GUI for visualizing those tens of parallel flows
-  "sourcetree",
+  ## GUI frontend to SQLite
+  "sqlitestudio",
   ## Virtual development environment management
   "vagrant",
   ## OS virtualization package
@@ -169,8 +157,6 @@ CASKS = [
   # OS X
   ## IM client (using dev branch; v1.6)
   "adium-nightly16",
-  ## Multi-button mouse savior
-  "bettertouchtool",
   ## Disk space analyzer/treemap viewer
   "disk-inventory-x",
   ## DNS encryption. Secure lookups against first-hop MITM's (e.g. public access points messing with/blocking some sites)
@@ -203,14 +189,10 @@ CASKS = [
   "inkscape",
   ## Free office suite [Office]
   "libreoffice",
-  ## Weather info display in menubar
-  "meteorologist",
   ## IM client
   "skype",
   ## Desktop sharing/remote control
   "teamviewer",
-  ## BitTorrent client
-  "transmission",
   ## Install disk images of flash drives
   "unetbootin",
   ## Media player, hadling anything thrown at it
