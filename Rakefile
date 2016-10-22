@@ -4,8 +4,6 @@ task :homebrew_taps do
   `brew tap caskroom/cask`
   # Neovim
   `brew tap neovim/homebrew-neovim`
-  # Tmux with TrueColor support
-  `brew tap aleksandrs-ledovskis/tmux-tc https://github.com/aleksandrs-ledovskis/tmux-tc.git`
   # Alternate Cask software versions
   `brew tap caskroom/versions`
 end
@@ -59,8 +57,6 @@ BREWS = [
   "sqlite",
   ## Solid ORDBMS
   "postgresql",
-  ## Geographic object support for pgSQL
-  "postgis",
 
   # Dev stuff
   ## Editor
@@ -69,6 +65,8 @@ BREWS = [
   "git --with-brewed-openssl --with-brewed-svn",
   ## Terminal multiplexer. Split console windows and stuff
   "tmux",
+  ## OS X specific trick to allow copy/pastes work from CLI
+  "reattach-to-user-namespace",
   ## Fuzzy file content searcher, like grep only 1000x faster
   "the_silver_searcher",
   ## Tag creator. Keeps index of definitions
@@ -79,24 +77,14 @@ BREWS = [
   "gcc",
   ## Dependecy library, parsing options in command lines
   "popt",
-  ## Prehistoric revision control system
-  "cvs",
   ## Old school revision control system
   "svn",
   ## Alternate revision control system
   "hg",
-  ## Somewhat uncommon revision control system
-  "bzr",
-  ## Cartographic projection conversion library, Proj4
-  "proj",
-  ## Geospatial data format management library
-  "gdal",
   ## Solid web server & reverse proxy
   "nginx",
   ## Scripting programming language. Version 3 is sometimes needed as dependency
   "python3",
-  # Go programming language
-  "go",
 
   # JS
   ## Compressor and linter
@@ -143,6 +131,8 @@ CASKS = [
   # Dev stuff
   ## LDAP workhorse
   "apache-directory-studio",
+  # Documentation HUD
+  "dash",
   ## GUI frontend to PostgreSQL
   "pgadmin3",
   ## GUI frontend to SQLite
@@ -173,8 +163,6 @@ CASKS = [
   "xquartz",
 
   # Misc
-  ## 3D graphics workbench [3ds Max]
-  "blender",
   ## E-book library management
   "calibre",
   ## Free diagram builder [Visio]
@@ -183,8 +171,6 @@ CASKS = [
   "flux",
   ## Free 2D raster graphics editor [Photoshop]
   "gimp",
-  ## Google Hangouts Screenshare enablement browser extensions
-  "google-hangouts",
   ## Free vector graphics editor [Illustrator]
   "inkscape",
   ## Free office suite [Office]
