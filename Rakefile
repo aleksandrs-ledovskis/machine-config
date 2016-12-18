@@ -85,6 +85,8 @@ BREWS = [
   "nginx",
   ## Scripting programming language. Version 3 is sometimes needed as dependency
   "python3",
+  ## GNU coreutils on a vacation in macOS. Contains, e.g. readlink(1) with sane `-f` option flag
+  "coreutils",
 
   # JS
   ## Compressor and linter
@@ -119,11 +121,11 @@ BREWS = [
   "ncdu",
   ## Adequate (and OSS) version of Cisco AnyConnect VPN software
   "openconnect",
-  # Taskwarrior, to-do tracker
+  ## Taskwarrior, to-do tracker
   "task",
-  # Taskwarrior shell
+  ## Taskwarrior shell
   "tasksh",
-  # nc(1) on steroids
+  ## nc(1) on steroids
   "socat",
 ]
 
@@ -131,10 +133,10 @@ CASKS = [
   # Dev stuff
   ## LDAP workhorse
   "apache-directory-studio",
-  # Documentation HUD
+  ## Documentation HUD
   "dash",
   ## GUI frontend to PostgreSQL
-  "pgadmin3",
+  "pgadmin4",
   ## GUI frontend to SQLite
   "sqlitestudio",
   ## Virtual development environment management
@@ -147,16 +149,26 @@ CASKS = [
   # OS X
   ## IM client (using dev branch; v1.6)
   "adium-nightly16",
+  ## Utility for tracking battery capacity changes over time
+  "coconutbattery",
   ## Disk space analyzer/treemap viewer
   "disk-inventory-x",
   ## DNS encryption. Secure lookups against first-hop MITM's (e.g. public access points messing with/blocking some sites)
   "dnscrypt",
   ## Mac OS X build of Chromium
   "freesmug-chromium",
-  ## Keyboard mapping customizer. macOS 10.12 compatible. Not yet in Homebrew
-  # "karabiner-elements",
+  ## Lossy compressor for PNG
+  "imagealpha",
+  ## Various image format optimizer/compressor
+  "imageoptim",
+  ## Tool for disabling idle/lid OS sleep
+  "insomniax",
+  ## Keyboard mapping customizer. macOS 10.12 compatible.
+  "karabiner-elements",
   ## File archiver. Happily munges through all popular and obscure formats (e.g. RAR)
   "keka",
+  ## Display of CPU temperature and fan speed in menubar
+  "smcfancontrol",
   ## Menubar status insights (for OS X 10.11+)
   "yujitach-menumeters",
   ## X11 for Mac
@@ -175,12 +187,12 @@ CASKS = [
   "inkscape",
   ## Free office suite [Office]
   "libreoffice",
+  ## Fast and easy 3D modelling
+  "sketchup",
   ## IM client
   "skype",
   ## Desktop sharing/remote control
   "teamviewer",
-  ## Install disk images of flash drives
-  "unetbootin",
   ## Media player, hadling anything thrown at it
   "vlc",
 ]
