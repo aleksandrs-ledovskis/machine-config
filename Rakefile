@@ -66,7 +66,7 @@ BREWS = [
   ## Terminal multiplexer. Split console windows and stuff
   "tmux",
   ## OS X specific trick to allow copy/pastes work from CLI
-  "reattach-to-user-namespace",
+  "reattach-to-user-namespace --with-wrap-pbcopy-and-pbpaste",
   ## Fuzzy file content searcher, like grep only 1000x faster
   "the_silver_searcher",
   ## Tag creator. Keeps index of definitions
