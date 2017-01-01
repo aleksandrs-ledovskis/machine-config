@@ -127,6 +127,8 @@ BREWS = [
   "tasksh",
   ## nc(1) on steroids
   "socat",
+  ## Terminal based YouTube player and downloader
+  "mps-youtube",
 ]
 
 CASKS = [
