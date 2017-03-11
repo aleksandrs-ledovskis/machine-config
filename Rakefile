@@ -87,6 +87,8 @@ BREWS = [
   "python3",
   ## GNU coreutils on a vacation in macOS. Contains, e.g. readlink(1) with sane `-f` option flag
   "coreutils",
+  ## Git diff prettifier script
+  "diff-so-fancy",
 
   # JS
   ## Compressor and linter
@@ -148,7 +150,7 @@ CASKS = [
   ## Packet analyzer
   "wireshark",
 
-  # OS X
+  # macOS
   ## IM client (using dev branch; v1.6)
   "adium-nightly16",
   ## Utility for tracking battery capacity changes over time
@@ -157,6 +159,8 @@ CASKS = [
   "disk-inventory-x",
   ## DNS encryption. Secure lookups against first-hop MITM's (e.g. public access points messing with/blocking some sites)
   "dnscrypt",
+  ## Clipboard manager
+  "flycut",
   ## Mac OS X build of Chromium
   "freesmug-chromium",
   ## Lossy compressor for PNG
