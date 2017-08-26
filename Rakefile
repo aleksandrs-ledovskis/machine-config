@@ -131,12 +131,20 @@ BREWS = [
   "socat",
   ## Terminal based YouTube player and downloader
   "mps-youtube",
+  ## GPG crypto suite
+  "gnupg",
+  ## Daemon for handling GPG secrets
+  "gpg-agent",
+  ## macOS specific dialog program for unlocking GPG key
+  "pinentry-mac"
 ]
 
 CASKS = [
   # Dev stuff
   ## LDAP workhorse
   "apache-directory-studio",
+  ## Collection of tools for using Chef-based configuration management
+  "chefdk",
   ## Documentation HUD
   "dash",
   ## GUI frontend to PostgreSQL
@@ -151,8 +159,6 @@ CASKS = [
   "wireshark",
 
   # macOS
-  ## IM client (using dev branch; v1.6)
-  "adium-nightly16",
   ## Utility for tracking battery capacity changes over time
   "coconutbattery",
   ## Disk space analyzer/treemap viewer
@@ -169,12 +175,12 @@ CASKS = [
   "imageoptim",
   ## Tool for disabling idle/lid OS sleep
   "insomniax",
-  ## Keyboard mapping customizer. macOS 10.12 compatible.
-  "karabiner-elements",
   ## File archiver. Happily munges through all popular and obscure formats (e.g. RAR)
   "keka",
   ## Display of CPU temperature and fan speed in menubar
   "smcfancontrol",
+  ## macOS driver for extra mouse button handling
+  "usb-overdrive",
   ## Menubar status insights (for OS X 10.11+)
   "yujitach-menumeters",
   ## X11 for Mac
