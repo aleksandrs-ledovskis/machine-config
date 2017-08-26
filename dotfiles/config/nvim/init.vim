@@ -19,16 +19,16 @@ Plug 'junegunn/vim-easy-align' " Alignment plugin with nice list of bundled rule
 Plug 'junegunn/fzf', { 'dir': '~/.fzf', 'do': 'yes \| ./install' } " Fuzzy file finder (binary & basic vim support)
 Plug 'junegunn/fzf.vim' " Advanced fzf <-> vim integration 
 Plug 'vim-ruby/vim-ruby' " Edge version of Vim's Ruby syntax support
-Plug 'simnalamburt/vim-mundo' " Treeview of file changes. Fork of Gundo
 Plug 'jeffkreeftmeijer/vim-numbertoggle' " Toggle between relative and absolute line numbers automatically
 Plug 'christoomey/vim-tmux-navigator' " Fast switching between Vim <-> Tmux
 Plug 'airblade/vim-gitgutter' " Git diff in the gutter
 Plug 'ctrlpvim/ctrlp.vim' " For buffer management
 Plug 'benekastah/neomake'
 Plug 'kchmck/vim-coffee-script' " CoffeeScript support
+Plug 'christoomey/vim-sort-motion'
 
 " Migrated from vimrc, but unreviewed
-Plug 'Colorizer--Brabandt' "  Display colors, as for example is CSS #F00B44 declarations
+Plug 'chrisbra/colorizer' "  Display colors, as for example is CSS #F00B44 declarations
 Plug 'ervandew/supertab' "  Better <TAB> completion/IntelliSense
 Plug 'tpope/vim-unimpaired' "  Useful bracket maps
 Plug 'majutsushi/tagbar' "  Source code tag browser
@@ -137,12 +137,6 @@ let g:airline_theme = 'molokai'
 
 " NERDTree
 map <F2> :NERDTreeToggle<CR>
-
-" Mundo/Gundo
-nnoremap <F5> :GundoToggle<CR>
-" Enable persistent undo so that undo history persists across vim sessions
-set undofile
-set undodir=~/.nvim/_undo
 
 " Neomake
 "" Ruby
