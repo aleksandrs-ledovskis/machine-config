@@ -56,6 +56,8 @@ source $BREW_HOME/share/gem_home/gem_home.sh
 # Base16 shell colors setup
 source "$HOME/.config/base16-shell/base16-twilight.dark.sh"
 
+# fzf
+source "$HOME/.fzf.zsh"
 #
 # Misc
 #
