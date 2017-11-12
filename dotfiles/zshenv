@@ -21,7 +21,10 @@ export LANG=en_US.UTF-8
 export EDITOR='nvim'
 
 # Custom/old Firefox for Selenium tests
-export SELENIUM_FIREFOX='/Applications/Firefox 3.6.28.app/Contents/MacOS/firefox-bin'
+export SELENIUM_FIREFOX='/Applications/Firefox 38 ESR.app/Contents/MacOS/firefox-bin'
+
+# Disable NPM version check overhead on `nvm use`
+export NO_UPDATE_NOTIFIER=1
 
 # Fzf
 # Don't display hidden/dot-prefixed matches
