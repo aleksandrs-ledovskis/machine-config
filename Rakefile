@@ -57,6 +57,8 @@ BREWS = [
   "sqlite",
   ## Solid ORDBMS
   "postgresql",
+  ## Libraries to talk to Microsoft SQL Server and Sybase databases
+  "freetds",
 
   # Dev stuff
   ## Editor
@@ -89,6 +91,12 @@ BREWS = [
   "coreutils",
   ## Git diff prettifier script
   "diff-so-fancy",
+  ## Cross-platform widget toolkit (for gitk(1) customization)
+  "tcl-tk",
+  ## Tool for automated testing of webapps across many browsers
+  "chromedriver",
+  ## Tool which checks for the support of TLS/SSL ciphers and flaws
+  "testssl",
 
   # JS
   ## Compressor and linter
@@ -136,7 +144,9 @@ BREWS = [
   ## Daemon for handling GPG secrets
   "gpg-agent",
   ## TTY dialog program for unlocking GPG key
-  "pinentry"
+  "pinentry",
+  ## Cross-platform file change monitor
+  "fswatch"
 ]
 
 CASKS = [
@@ -147,6 +157,10 @@ CASKS = [
   "chefdk",
   ## Documentation HUD
   "dash",
+  ## Multi-platform database tool
+  "dbeaver-community",
+  ## Universal database tool
+  "dbvisualizer",
   ## GUI frontend to PostgreSQL
   "pgadmin4",
   ## GUI frontend to SQLite
@@ -163,8 +177,6 @@ CASKS = [
   "coconutbattery",
   ## Disk space analyzer/treemap viewer
   "disk-inventory-x",
-  ## DNS encryption. Secure lookups against first-hop MITM's (e.g. public access points messing with/blocking some sites)
-  "dnscrypt",
   ## Clipboard manager
   "flycut",
   ## Mac OS X build of Chromium
@@ -197,6 +209,8 @@ CASKS = [
   "gimp",
   ## Free vector graphics editor [Illustrator]
   "inkscape",
+  ## GUI replacement for the Java command-line utilities keytool and jarsigner
+  "keystore-explorer",
   ## Free office suite [Office]
   "libreoffice",
   ## Fast and easy 3D modelling
