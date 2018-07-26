@@ -135,8 +135,8 @@ BREWS = [
   "gnupg",
   ## Daemon for handling GPG secrets
   "gpg-agent",
-  ## macOS specific dialog program for unlocking GPG key
-  "pinentry-mac"
+  ## TTY dialog program for unlocking GPG key
+  "pinentry"
 ]
 
 CASKS = [
