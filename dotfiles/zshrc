@@ -53,6 +53,16 @@ source $BREW_HOME/etc/profile.d/z.sh
 # gem_home (superseeded chgems)
 source $BREW_HOME/share/gem_home/gem_home.sh
 
+# Support binstubs with gem_home
+eval "`declare -f gem_home_push | sed '1s/.*/_&/'`"
+function gem_home_push() {
+  _gem_home_push "$1"
+
+  [[ $PATH =~ "^\./bin:" ]] && return
+
+  export PATH="./bin:$PATH"
+}
+
 # Base16 shell colors setup
 source "$HOME/.config/base16-shell/base16-twilight.dark.sh"
 

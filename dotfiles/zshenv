@@ -35,3 +35,9 @@ export FZF_DEFAULT_COMMAND='(find * -name ".*" -prune -o -type f -print -o -type
 
 # For gpg-agent & pinentry-tty interaction
 export GPG_TTY=$(tty)
+
+# Disable GitHub credential lookup by Homebrew
+export HOMEBREW_NO_GITHUB_API=1
+
+# Binstub support
+export PATH="./bin:$PATH"
