@@ -146,7 +146,9 @@ BREWS = [
   ## TTY dialog program for unlocking GPG key
   "pinentry",
   ## Cross-platform file change monitor
-  "fswatch"
+  "fswatch",
+  ## Perl module manager
+  "cpanminus
 ]
 
 CASKS = [

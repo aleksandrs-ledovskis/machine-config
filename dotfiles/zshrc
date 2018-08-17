@@ -58,6 +58,31 @@ source "$HOME/.config/base16-shell/base16-twilight.dark.sh"
 
 # fzf
 source "$HOME/.fzf.zsh"
+
+# Override fzf CTRL-R integration to remove duplicate history entries
+# For cases when HIST_IGNORE_ALL_DUPS is not set (preserving all command invocations)
+# Based on https://github.com/junegunn/fzf/issues/600#issuecomment-227135066
+eval "`declare -f fzf-history-widget | sed '1s/.*/_&/'`"
+fzf-history-widget() {
+  local selected num
+  setopt localoptions noglobsubst noposixbuiltins pipefail 2> /dev/null
+  countskip="$(fc -l 1 | tail -n 1 | grep -E '^[0-9]+' -o | wc -c)"
+  countskip="$(( countskip + 1 ))"
+
+  selected=( $(fc -rl 1 | sed 's/ *$//g' | tail -r | nauniq --skip-chars="$countskip" | tail -r |
+    FZF_DEFAULT_OPTS="--height ${FZF_TMUX_HEIGHT:-40%} $FZF_DEFAULT_OPTS -n2..,.. --tiebreak=index --bind=ctrl-r:toggle-sort $FZF_CTRL_R_OPTS --query=${(qqq)LBUFFER} +m" $(__fzfcmd)) )
+  local ret=$?
+  if [ -n "$selected" ]; then
+    num=$selected[1]
+    if [ -n "$num" ]; then
+      zle vi-fetch-history -n $num
+    fi
+  fi
+  zle redisplay
+  typeset -f zle-line-init >/dev/null && zle zle-line-init
+  return $ret
+}
+
 #
 # Misc
 #
