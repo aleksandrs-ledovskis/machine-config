@@ -79,7 +79,7 @@ fzf-history-widget() {
   countskip="$(fc -l 1 | tail -n 1 | grep -E '^[0-9]+' -o | wc -c)"
   countskip="$(( countskip + 1 ))"
 
-  selected=( $(fc -rl 1 | sed 's/ *$//g' | tail -r | nauniq --skip-chars="$countskip" | tail -r |
+  selected=( $(fc -rl 1 | sed 's/ *$//g' | nauniq --skip-chars="$countskip" |
     FZF_DEFAULT_OPTS="--height ${FZF_TMUX_HEIGHT:-40%} $FZF_DEFAULT_OPTS -n2..,.. --tiebreak=index --bind=ctrl-r:toggle-sort $FZF_CTRL_R_OPTS --query=${(qqq)LBUFFER} +m" $(__fzfcmd)) )
   local ret=$?
   if [ -n "$selected" ]; then
